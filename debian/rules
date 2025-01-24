@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+
+VERSION = 5.1.1
+CHECKOUT = afba3290a14cbed8391b466190abe4626cf0b1e1
+CHECKOUTDIR = fonts/google
+FONT = ibm-plex-sans
+
+%:
+	dh $@
+
+get-orig-source:
+	CURDIR=`pwd` && \
+	TMPDIR=`mktemp -d /tmp/node-fontsource-$(FONT)-$(VERSION).XXXXXX` && \
+	cd $$TMPDIR && \
+	git clone https://github.com/fontsource/font-files.git --filter=blob:none --no-checkout --sparse font-files && \
+	cd font-files && \
+	git sparse-checkout init --cone && \
+	git sparse-checkout add $(CHECKOUTDIR)/$(FONT) && \
+	git checkout $(CHECKOUT) && \
+	cd $(CHECKOUTDIR) && \
+	tar -Jcf $$CURDIR/node-fontsource-$(FONT)_$(VERSION).orig.tar.xz $(FONT) && \
+	rm -rf $$TMPDIR
+
+.PHONY: get-orig-source
+

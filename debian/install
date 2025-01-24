@@ -1,0 +1,4 @@
+*.css usr/share/nodejs/@fontsource/ibm-plex-sans/
+files usr/share/nodejs/@fontsource/ibm-plex-sans/
+scss usr/share/nodejs/@fontsource/ibm-plex-sans/
+*.json usr/share/nodejs/@fontsource/ibm-plex-sans/

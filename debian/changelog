@@ -1,0 +1,5 @@
+node-fontsource-ibm-plex-sans (5.1.1-1) UNRELEASED; urgency=medium
+
+  * Initial packaging.
+
+ -- s0600204 <dev@s0600204>  Fri, 24 Jan 2025 22:34:00 +0000

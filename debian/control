@@ -1,0 +1,19 @@
+Source: node-fontsource-ibm-plex-sans
+Section: javascript
+Priority: optional
+Maintainer: s0600204 <dev@s0600204>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13)
+Standards-Version: 4.6.2
+Homepage: https://github.com/tcort/dijkstrajs
+
+Package: node-fontsource-ibm-plex-sans
+Architecture: all
+Depends:
+ ${misc:Depends}
+Description: ibm-plex-sans font self-hostable for Node.js
+ The node-fontsource-ibm-plex-sans package contains the ibm-plex-sans
+ font and CSS files suitable for self-hosting with Node.js.
+ .
+ Node.js is an event-based server-side JavaScript engine.
